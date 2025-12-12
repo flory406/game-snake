@@ -14,7 +14,7 @@ snake = Snake()
 food = Food()
 running = True
 while running:
-    clock.tick(20)
+    clock.tick(15)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -28,7 +28,7 @@ while running:
             SCORE += 1
     else:
         pygame.display.set_caption("You lose")
-        game_over_text = font.render("GAME OVER", True, BLACK)
+        game_over_text = font.render("Game over!", True, BLACK)
         screen.blit(game_over_text, (320, 280))
     snake.draw(screen)
     food.draw(screen)

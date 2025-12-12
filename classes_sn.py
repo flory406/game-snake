@@ -1,5 +1,5 @@
-import random
 import pygame
+import random
 
 SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
 
@@ -61,11 +61,11 @@ class Snake:
     
     def move(self):
         keys = pygame.key.get_pressed()
-        if keys[pygame.K_LEFT] and self.direction != (CELL_SIZE, 0):
-            self.direction = (-CELL_SIZE, 0)
         if keys[pygame.K_RIGHT] and self.direction != (-CELL_SIZE, 0):
             self.direction = (CELL_SIZE, 0)
-        if keys[pygame.K_UP] and self.direction != (0, CELL_SIZE):
-            self.direction = (0, -CELL_SIZE)
         if keys[pygame.K_DOWN] and self.direction != (0, -CELL_SIZE):
             self.direction = (0, CELL_SIZE)
+        if keys[pygame.K_UP] and self.direction != (0, CELL_SIZE):
+            self.direction = (0, -CELL_SIZE)
+        if keys[pygame.K_LEFT] and self.direction != (CELL_SIZE, 0):
+            self.direction = (-CELL_SIZE, 0)
